@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This is for you</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <script src="js/flexible.min.js"></script> -->
+    <script>
+        //判断是否pc端
+            function IsPC() {
+                var userAgentInfo = navigator.userAgent;
+                var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod", 'iPad');
+                var flag = true;
+                for (var v = 0; v < Agents.length; v++) {
+                    if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+                }
+                return flag;
+            }
+            var jumpPc = IsPC();
+            if (jumpPc != false) {
+                document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">');
+                document.write('<style>html{font-size:75px;}body{width:375px!important;height:667px!important;margin:0 auto}</style>');
+            } else {
+                document.write('<script src="js/flexible.min.js"><\/script>');
+            }
+    </script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- loading  -->
+    <div class="preload">
+        <!-- pie为半圆 -->
+        <div class="zoom">
+            <div class="outer-circle"></div>
+            <div class="inner-circle"></div>
+        </div>
+        <div class="load">
+            <div class="pie1"></div>
+            <div class="pie2"></div>
+            <div class="thumb">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="percentage">
+            <span class="num">0</span>%
+        </div>
+    </div>
+    <!-- All Page  -->
+    <div class="swiper-container" id="swiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page1">
+                <div class="page_wrap">
+                    <div style="width: 1.209656rem; height: 2.73928rem; left: 3.60556rem; top: 0rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page1_wall">
+                            <img src="./images/page1_wall.png" style="opacity: 0;">
+                        </div>
+                    </div>
+                    <div style="width: .866269rem; height: 2.107147rem; left: 3.800667rem; top: .390212rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page1_520">
+                            <img src="./images/520.png" style="opacity: 0;">
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: 1.789973rem; height: .659235rem; top: 2.8044rem; right:.05rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page1_luky">
+                            <div>LUKY</div>
+                        </div>
+                    </div>
+                    <div style="width: 100%; height: 100%; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;z-index:-1;">
+                        <div class="animated page1_bg">
+                            <img src="./images/page_bg.png" style="opacity: 0;">
+                        </div>
+                    </div>
+                    <div style="width: 1.584253rem; height: .05463rem; left: .273088rem; top: .944312rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page1_line"><img src="./images/page1_line.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="position: absolute; width: 1.789973rem; height: .765185rem; top: .234521rem; left: 1.52216rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page1_name">
+                            <div>Mr江琴</div>
+                        </div>
+                    </div>
+                    <div style="width: .997053rem; height: 1.029609rem; left: 1.139189rem; top: .590695rem; position: absolute; opacity: 1; transform: rotate(340deg); cursor: pointer;">
+                        <div class="animated page1_heart"><img src="./images/heart.gif" style="opacity: 0;"></div>
+                    </div>
+                    <div style="position: absolute; width: 3.88392rem; height: .388477rem; top: .990192rem; left: -0.289428rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page1_words">
+                            <div>确认过眼神&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遇见对的你</div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: 1.728093rem; height: .376705rem; top: .518391rem; left: .269705rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page1_time">
+                            <div>/2012-<span id="time"></span>/</div>
+                        </div>
+                    </div>
+                    <div style="width: 100%; height: 3.325853rem; left: 0rem; bottom:0rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;z-index: -2;">
+                        <div class="animated page1_moreHeart"><img src="./images/moreHeart.gif" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 100%; height: 6.753867rem; left: 0%; bottom: 0%; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;z-index: -1;">
+                        <div class="animated page1_you"><img src="./images/you3.png" style="opacity: 0;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide page7">
+                <div class="page_wrap">
+                    <div style="width: 4.159653rem; height: 8.272493rem; left: .390212rem; top: .093651rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page7_wall" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_wall.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; transform: none;"><img
+                                src="./images/page7_wall.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 4.159653rem; height: 8.272493rem; left: .413624rem; top: .031217rem; position: absolute; opacity: 0.541176; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page7_wall2" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_wall.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/page7_wall.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .249736rem; height: .234127rem; left: 2.35688rem; top: .280952rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page7_heart" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_heart.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/page7_heart.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="position: absolute; width: 1.61548rem; height: auto; top: 7.429627rem; left: 1.740347rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page7_bottomWord" style="width: 100%; height: auto; text-align: center; font-weight: normal; text-decoration: none; line-height: 1.5; border-style: none; border-color: rgb(0, 0, 0); border-width: 0px; font-style: normal; border-radius: 0px; box-shadow: black 0px 0px 0px; word-wrap: break-word;  font-size: .186667rem; ">
+                            <div>你占据着世界</div>
+                        </div>
+                    </div>
+                    <div style="width: 1.06918rem; height: .327777rem; left: 3.480693rem; top: .398016rem; position: absolute; opacity: 0.73; transform: rotate(180deg); cursor: pointer;">
+                        <div class="animated page7_flower1" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_flower1.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; transform: none; "><img
+                                src="./images/page7_flower1.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.06918rem; height: .327777rem; left: .491667rem; top: .398016rem; position: absolute; opacity: 0.72; transform: rotate(180deg); cursor: pointer;">
+                        <div class="animated page7_flower2" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_flower2.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; transform: none; "><img
+                                src="./images/page7_flower2.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 3.91772rem; height: 2.614413rem; left: .522884rem; top: .850661rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page7_img1" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; ">
+                            <img src="./images/you19.png" style=" width: 49%; float: left; ">
+                            <img src="./images/you5.jpg" style=" width: 49%; float: right; ">
+                        </div>
+                    </div>
+                    <div style="width: 3.855293rem; height: 2.559787rem; left: .522884rem; top: 4.596693rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page7_img2" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/you18.jpg&quot;); background-repeat: no-repeat; background-size: auto 100%; background-position:center center; "><img
+                                src="./images/you18.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="position: absolute; width: 2.684653rem; height: auto; top: 3.72092rem; left: 1.061376rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page7_word" style=" width: 100%; height: auto;text-align: center; font-weight: bold; text-decoration: none; line-height: 1.8; border-style: none; border-color: rgb(0, 0, 0); border-width: 0px; font-style: italic; border-radius: 0px; box-shadow: black 0px 0px 0px; word-wrap: break-word;  font-size: .186667rem;">
+                            <div>世界那么大，人那么的多 我遇见了你，你遇见了我 真好。
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 1.06918rem; height: .327777rem; left: 3.480693rem; top: 7.242333rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page7_flower3" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_flower3.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/page7_flower3.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.06918rem; height: .327777rem; left: .522884rem; top: 7.23452rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page7_flower4" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_flower4.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/page7_flower4.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .499471rem; height: .499471rem; left: 2.247613rem; top: .132672rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page7_heart1" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_heart.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; transform: none; "><img
+                                src="./images/page7_heart.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.06918rem; height: .327777rem; left: .390212rem; top: .398016rem; position: absolute; opacity: 1; transform: rotate(180deg); cursor: pointer;">
+                        <div class="animated page7_flower5" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_flower5.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/page7_flower5.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.06918rem; height: .327777rem; left: 3.418253rem; top: .382408rem; position: absolute; opacity: 1; transform: rotate(180deg); cursor: pointer;">
+                        <div class="animated page7_flower6" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page7_flower6.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/page7_flower6.png" style="opacity: 0;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="swiper-slide page2">
+                <div class="page_wrap">
+                <div style="width: 100%; height: 100%; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;z-index:-1;">
+                    <div class="animated page2_bg">
+                        <img src="./images/page_bg.png" style="opacity: 0;">
+                    </div>
+                </div>
+                <div style="width: 100%; height: 4.36256rem; left: 0rem; top: 0rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                    <div class="animated page2_you"></div>
+                </div>
+                <div style="width: .202911rem; height: .881879rem; left: .476059rem; top: 4.674733rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                    <div class="animated page2_korean"><img src="./images/page2_korean.png" style="opacity: 0;"></div>
+                </div>
+                <div style="width: .05rem; height: 2.458333rem; left: .803836rem; top: 4.666933rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                    <div class="animated page2_line">
+                    </div>
+                </div>
+                <div style="width: .078042rem; height: .078042rem; left: 3.3246rem; top: 5.728307rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                    <div class="animated page2_point point1"><img src="./images/page2_point.png" style="opacity: 0;"></div>
+                </div>
+                <div style="width: .078042rem; height: .078042rem; left: 3.660187rem; top: 5.728307rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                    <div class="animated page2_point point2"><img src="./images/page2_point.png" style="opacity: 0;"></div>
+                </div>
+                <div style="width: .078042rem; height: .078042rem; left: 4.003573rem; top: 5.728307rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                    <div class="animated page2_point point3"><img src="./images/page2_point.png"></div>
+                </div>
+                <div style="width: .078042rem; height: .078042rem; left: 4.33916rem; top: 5.728307rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                    <div class="animated page2_point point4"><img src="./images/page2_point.png"></div>
+                </div>
+                <div style="position: absolute; width: .522525rem; height: 2.74288rem; top: 4.674733rem; left: .886561rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                    <div class="animated page2_word">
+                        <div>遇<br>见<br>你<br>是<br>我<br>的<br>小<br>幸<br>运</div>
+                    </div>
+                </div>
+                <div style="position: absolute; width: 3.139267rem; height: 1.624547rem; top: 5.9078rem; left: 1.363787rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                    <div class="animated page2_poem">
+                        <div>悄悄说,I LOVE YOU<br>让我紧紧的怀抱你<br>温柔的言语轻轻拨动你的心弦<br>世界属于我们两个人</div>
+                    </div>
+                </div>
+                </div>
+            </div> -->
+            <div class="swiper-slide page3">
+                <div class="page_wrap">
+                    <div style="width: 100%; height: 100%; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;z-index:-1; background: white;">
+                    </div>
+                    <div style="width: 100%; height: 100%; left: -1.329287rem; top: 0rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page3_you"><img src="./images/you5.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .109259rem; height: .109259rem; left: 4.35476rem; top: .458995rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page3_point point1"><img src="./images/page2_point.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .109259rem; height: .109259rem; left: 4.35476rem; top: 0.732143rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page3_point point2"><img src="./images/page2_point.png"></div>
+                    </div>
+                    <div style="width: .109259rem; height: .109259rem; left: 4.35476rem; top: 1.005291rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page3_point point3"><img src="./images/page2_point.png"></div>
+                    </div>
+                    <div style="width: .741403rem; height: .647751rem; left: 4rem; bottom: .4rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page3_crown">
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: .522525rem; height: 5.697667rem; top: 1.365847rem; left: 4.175267rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page3_word">
+                            <div>你<br>就<br>是<br>我<br>的<br>小<br>公主</div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: .851785rem; height: .315476rem; top: 0rem; left: 3.978813rem; transform: rotate(0deg);">
+                        <div class="animated page3_draw"><svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-23 81 152 39"
+                                style="position: absolute; width: .851785rem; height: .315476rem; opacity: 1;"
+                                xml:space="preserve" preserveAspectRatio="none meet">
+                                <style type="text/css">
+                                    .class15264482486820 {
+                                        fill: #000000;
+                                    }
+                                </style>
+                                <title>Group 7 Copy</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Page-1">
+                                    <g id="Group-7-Copy" transform="translate(76.000000, 19.500000) scale(1, -1) translate(-76.000000, -19.500000) ">
+                                        <path id="Fill-137" class="class15264482486820" d="M57.2-75.1c-10.8-9.5-29.7-3-39.9,4.3c-8.2,5.9-17.7,16.9-29,14.1c-6.7-1.6-10.6-7.6-8.3-14.4
+			c0.9-2.6,2.6-5.3,5.1-6.5c1.5-0.7,3.5-1,5.1-0.5c4.4,1.4,4.1,9.5-1.2,8.5c-0.8-0.1-1.1,1-0.3,1.2c3.4,0.8,6.6-1.6,6.9-5.1
+			c0.4-4.1-3.7-6.9-7.5-6.9c-11.1,0-14.3,16.4-6.8,22.8c11.4,9.6,25-1.5,34.1-8.7c7.4-5.9,15.8-10,25.3-10.8
+			c9.5-0.8,19.3,3.5,19.4,14.2c0.1,10.2-10.1,17.8-19.7,18.2c-6.8,0.3-13.4-4.9-11-12.3c1.9-5.8,13.1-9.7,14.3-1.1
+			c0.2,1.3,2.2,1.4,2.2,0c-0.2-4.5-4.1-7.3-8.5-7.4c-5.1-0.1-9.6,4.1-10.6,9c-1.2,5.5,2,11.1,7.1,13.2c5.6,2.3,12.6,0.5,17.6-2.3
+			C61.7-51.3,67.2-66.3,57.2-75.1"></path>
+                                        <path id="Fill-139" class="class15264482486820" d="M48.3-75.1c10.8-9.5,29.7-3,39.9,4.3c8.2,5.9,17.7,16.9,29,14.1c6.7-1.6,10.6-7.6,8.3-14.4
+			c-0.9-2.6-2.6-5.3-5.1-6.5c-1.5-0.7-3.5-1-5.1-0.5c-4.4,1.4-4.1,9.5,1.2,8.5c0.8-0.1,1.1,1,0.3,1.2c-3.4,0.8-6.6-1.6-6.9-5.1
+			c-0.4-4.1,3.7-6.9,7.5-6.9c11.1,0,14.3,16.4,6.8,22.8c-11.4,9.6-25-1.5-34.1-8.7c-7.4-5.9-15.8-10-25.3-10.8
+			c-9.5-0.8-19.3,3.5-19.4,14.2c-0.1,10.2,10.1,17.8,19.7,18.2c6.8,0.3,13.4-4.9,11-12.3c-1.9-5.8-13.1-9.7-14.3-1.1
+			c-0.2,1.3-2.2,1.4-2.2,0c0.2-4.5,4.1-7.3,8.5-7.4c5.1-0.1,9.6,4.1,10.6,9c1.2,5.5-2,11.1-7.1,13.2c-5.6,2.3-12.6,0.5-17.6-2.3
+			C43.8-51.3,38.3-66.3,48.3-75.1"></path>
+                                    </g>
+                                </g>
+                            </svg></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide page4">
+                
+                    <div style="width: 100%; height: 3.470907rem; left: 0%; top: 1.989307rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="swiper-container page4_you" id="swiper2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide1">
+                                </div>
+                                <div class="swiper-slide slide2">
+                                </div>
+                                <div class="swiper-slide slide3">
+                                </div>
+                                <div class="swiper-slide slide4">
+                                </div>
+                                <div class="swiper-slide slide5">
+                                </div>
+                                <div class="swiper-slide slide6">
+                                </div>
+                                <div class="swiper-slide slide7">
+                                </div>
+                                <div class="swiper-slide slide8">
+                                </div>
+                                <div class="swiper-slide slide9">
+                                </div>
+                                <div class="swiper-slide slide10">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div style="width: 1.318916rem; height: 1.318916rem; left: 1.8418rem; top: .273148rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page4_cube"><img src="./images/page4_pink.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.342333rem; height: 1.342333rem; left: 1.740347rem; top: .179497rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page4_border"><img src="./images/page4_border.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .140476rem; height: .273148rem; left: 2.49736rem; top: 5.548813rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page4_diagonal"><img src="./images/page4_diagonal.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 3.269973rem; height: .195105rem; left: .858465rem; top: 1.724733rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page4_enjoy"><img src="./images/page4_enjoy.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="position: absolute; width: 1.275613rem; height: .894675rem; top: .472936rem; left: 1.857413rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page4_topword">
+                            <div>静享<br>时光</div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: 2.57336rem; height: .376705rem; top: 5.82352rem; left: 1.209656rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page4_poem1">
+                            <div>是谁说过</div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: 2.57336rem; height: .376705rem; top: 6.13048rem; left: 1.209656rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page4_poem2">
+                            <div>心的空间也有时候很大</div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: 2.57336rem; height: .376705rem; top: 6.432253rem; left: 1.212257rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page4_poem3">
+                            <div>可以装的下整个世界</div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: 2.57336rem; height: .376705rem; top: 6.749627rem; left: 1.225264rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page4_poem4">
+                            <div>可有时却很小很小</div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: 2.57336rem; height: .376705rem; top: 7.061787rem; left: 1.225264rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page4_poem5">
+                            <div>只装得下你一个人</div>
+                        </div>
+                    </div>
+            </div>
+            <div class="swiper-slide page5">
+                <div class="page_wrap">
+                    <div style="width: 3.6914rem; height: 2.310053rem; left: .671164rem; top: .499471rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page5_img1" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_5.jpg&quot;); background-repeat: no-repeat; background-size: auto 100%; background-position: 0px 0px;">
+                            <img src="./images/us_5.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.170635rem; height: .499471rem; left: .51508rem; top: .319973rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page5_leftwall"><img src="./images/page5_leftwall.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 3.6914rem; height: 2.310053rem; left: .671164rem; top: 3.277773rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page5_img2" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/church.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/church.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 4.003573rem; height: .757011rem; left: .51508rem; top: 5.002507rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page5_rightwall"><img src="./images/page5_rightwall.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .546296rem; height: .499471rem; left: 4.190867rem; top: 2.630027rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page5_flower"><img src="./images/page5_flower.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="position: absolute; width: 3.901213rem; height: .871131rem; top: 6.219973rem; left: .608731rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page5_word">
+                            <div>相互添加色彩，<br>成为彼此生命中的彩虹</div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: 2.275493rem; height: .435565rem; top: 7.172093rem; left: 2.140787rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page5_name">
+                            <div>——Ronan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide page6">
+                <div class="page_wrap">
+                    <div style="position: absolute; width: 3.230947rem; height: auto; top: 5.24444rem; left: 1.54524rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page6_word" style="width: 100%; height: auto; color: rgb(0, 0, 0); text-align: center; font-weight: normal; text-decoration: none; line-height: 1.5; border-style: none; border-color: rgb(0, 0, 0); border-width: 0px; font-style: normal; border-radius: 0px; box-shadow: black 0px 0px 0px; word-wrap: break-word; font-size: .213333rem; ">
+                            <div>爱，需要一点一滴的积累； 情，需要每时每刻的维护！ 我要用时间积累对你的爱， 用承诺兑现对你的情， 用永恒化作我们一个圆满的
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 1.045767rem; height: 2.50516rem; left: .327777rem; top: 4.971293rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_title" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page6_wall.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/page6_wall.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.014551rem; height: 1.225264rem; left: .343387rem; top: 5.439547rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_diagonal" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/page6_diagonal.png&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; transform: none; "><img
+                                src="./images/page6_diagonal.png" style="opacity: 0;"></div>
+                    </div>
+                    <div style="position: absolute; width: 1.006747rem; height: auto; top: 4.885453rem; left: .304365rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page6_title1" style=" width: 100%; height: auto; color: rgb(0, 0, 0); text-align: center; font-weight: normal; text-decoration: none; line-height: 1.3; border-style: none; border-color: rgb(0, 0, 0); border-width: 0px; font-style: normal; border-radius: 0px; box-shadow: black 0px 0px 0px; word-wrap: break-word; font-size: .746667rem; ">
+                            <div>相<br></div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; width: 1.006747rem; height: auto; top: 6.212173rem; left: .327777rem; transform: rotate(0deg); transform-origin: center center 0px; opacity: 1;">
+                        <div class="animated page6_title2" style=" width: 100%; height: auto; color: rgb(0, 0, 0); text-align: center; font-weight: normal; text-decoration: none; line-height: 1.3; border-style: none; border-color: rgb(0, 0, 0); border-width: 0px; font-style: normal; border-radius: 0px; box-shadow: black 0px 0px 0px; word-wrap: break-word; font-size:.746667rem; ">
+                            <div>爱<br></div>
+                        </div>
+                    </div>
+                    <div style="width: 1.06918rem; height: 1.06918rem; left: 1.958867rem; top: 1.599867rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_centerimg" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;http://img1.maka.im/user/4736083/images/a28a9831e1151034b2ae666c47b6856d.jpg@0-0-659-659a_80Q.src&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px;"><img
+                                src="http://img1.maka.im/user/4736083/images/a28a9831e1151034b2ae666c47b6856d.jpg@0-0-659-659a_80Q.src"
+                                style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.06918rem; height: 1.076984rem; left: 3.043653rem; top: 1.592067rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_centerRightimg" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_7.jpg&quot;); background-repeat: no-repeat; background-size: 100% auto; background-position: 0px 0px; "><img
+                                src="./images/us_7.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.06918rem; height: 1.06918rem; left: .866269rem; top: 1.607667rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_centerLeftimg" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_6.jpg&quot;); background-repeat: no-repeat; background-size: 100% auto; background-position: 0px 0px; "><img
+                                src="./images/us_6.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: .452645rem; top: 1.607667rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img1" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_11.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_11.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: .452645rem; top: 1.186244rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img2" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_12.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_12.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: .452645rem; top: 2.021293rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img3" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_10.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_10.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 4.144053rem; top: 1.186244rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img4" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_12.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_12.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 4.144053rem; top: 1.607667rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img5" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_11.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_11.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 4.144053rem; top: 2.021293rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img6" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_10.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_10.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .858465rem; height: .858465rem; left: .866269rem; top: .717989rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img7" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_8.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_8.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .780423rem; height: .858465rem; left: 3.332413rem; top: .717989rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img8" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_4.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_4.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 1.748147rem; top: 1.178439rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img9" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_13.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_13.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 2.918787rem; top: 1.178439rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img10" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_13.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_13.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: 1.06918rem; height: 1.06918rem; left: 1.958867rem; top: 2.692467rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img11" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_9.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_9.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 1.54524rem; top: 2.715867rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img12" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/cat1.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/cat1.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 1.123809rem; top: 2.708067rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img13" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_11.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_11.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 1.53744rem; top: 3.121693rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img14" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_11.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_11.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 3.051453rem; top: 2.708067rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img15" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/cat2.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/cat2.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 3.051453rem; top: 3.113893rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img16" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_11.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_11.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 3.45728rem; top: 2.700267rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img17" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;./images/us_11.jpg&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="./images/us_11.jpg" style="opacity: 0;"></div>
+                    </div>
+                    <div style="width: .390212rem; height: .390212rem; left: 2.302253rem; top: 3.800667rem; position: absolute; opacity: 1; transform: rotate(0deg); cursor: pointer;">
+                        <div class="animated page6_img18" style="position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url(&quot;http://img1.maka.im/user/4736083/images/a28a9831e1151034b2ae666c47b6856d.jpg@0-0-659-659a_80Q.src&quot;); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; "><img
+                                src="http://img1.maka.im/user/4736083/images/a28a9831e1151034b2ae666c47b6856d.jpg@0-0-659-659a_80Q.src"
+                                style="opacity: 0;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide page8">
+                <div class="page_wrap">
+                    <div class="top_wrap">
+                        <div class="page8_qbt">
+                            <img src="./images/page8_qbt.png" alt="">
+                        </div>
+                        <div class="page8_target">
+                            <img src="./images/page8_target.png" alt="">
+                        </div>
+                    </div>
+                    <div class="typed_wrap">
+                        <span id="typed"></span>
+                    </div>
+                    <div class="content">
+                        <ul id="inHtml"></ul>
+                    </div>
+                    <div class="main">
+                        <img id='name' src="./images/cat2.jpg">
+                        <input id='import' type="text">
+                        <span id="enter">发送</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Arrow  -->
+    <div class="Arrow" style="display: block;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAkCAMAAADip6m2AAAAolBMVEUAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAHBwcAAAD////9/f37+/vt7e25ubn39/cKCgrz8/Pe3t7c3Nz+/v729vbW1tZra2tKSkoAAABpaWlgYGD9/f38/Pz5+fn5+fn39/fz8/Px8fHu7u7q6urm5ubj4+Pd3d3y8vLX19fJycnAwMC4uLisrKyhoaGVlZWGhoajo6MpKSkxMTGAgID///9oDYyzAAAANXRSTlMAAwcLFR0SGRAO+efJbSOcIqBDQvLNbTEpGxEQ9e3h29XDvLOsnJOJiIFpYVlNRkE7MiwfDLl52bwAAAGFSURBVEjH3ZXZboMwFERbHAMhC6EFQtrs+777/3+t98bGjmwqy32plHmLPYfMiYTy9nJ5F/kb693j+O4h7Y567SZjzbYHuDv72WCQxgfSjixpReyRqEWAdmK/YyaTfAHtpivjIo6TUReTZYxxcZzupju/XufP4g660aYD2USmuF13sKeP7Ae6uF13fKZBDRLQ81gTt+rOCmD9MPSBLmaauEV3hWidQOqIr57FLbrpDllCPAghSO9SU7xad3QCNiRQgwAeAn0a6eLVutOC4mRk+SCcToupIW7qsmWnByw25B3Svc6SaeKGbn9LA8UqGsW3fVMc2VJ3eJS6apcUPw5LcVmAq1J30qWBL1mN9gPanZTiUBE3pe5C6cpo4gtRjXkJjtf8cbnSlTHEcz5yTTwBh00UOVToVogfGvibhQq+pCyr0q0Wz1h6kTDsyZObPvn36bckh6qA8YE1eIUEa6GxyyeKEzhC1MLy6byL3yNP4BNn7TSWVRffHYHaI7qq7PB3qMr/mh8s20b2bOZlXQAAAABJRU5ErkJggg=="
+            alt="">
+    </div>
+    <!-- Music -->
+    <audio loop src="music/Marry_me.mp3" id="bgmedia" preload autoplay>
+    <!-- 该浏览器不支持audio属性 -->
+    </audio>
+    <img src="images/musicon.png" class="music" id="music">
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="./js/typed.min.js"></script>
+<script type="text/javascript">
+    //加载图片
+    $(function () {
+        //微信必须加入Weixin JSAPI的WeixinJSBridgeReady才能生效 
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            $("#bgmedia").get(0).play();
+        }, false);
+        // loading-First
+        // 图片加载是异步。为了防止意外，最好把回调函数写在src上面
+        var img = new Image();
+        img.addEventListener('load', function () {
+            $(".zoom").hide();
+            $(".load").show();
+            $(".percentage").show();
+            // loading-Second
+            $(".thumb img").attr("src", img.src);
+            preloadimage(impImg);
+        }, false)
+        img.src = "images/together_1.jpg";
+
+        var impImg = [
+            'images/520.png',
+            'images/cat1.jpg',
+            'images/cat2.jpg',
+            'images/church.jpg',
+            'images/heart.gif',
+            'images/moreHeart.gif',
+            'images/musicon.png',
+            'images/musicoff.png',
+            'images/page_bg.png',
+            'images/page1_line.png',
+            'images/page1_wall.png',
+            'images/page2_korean.png',
+            'images/page2_line.png',
+            'images/page2_point.png',
+            'images/page3_crown.png',
+            'images/page4_border.png',
+            'images/page4_diagonal.png',
+            'images/page4_enjoy.png',
+            'images/page4_pink.png',
+            'images/page5_flower.png',
+            'images/page5_leftwall.png',
+            'images/page5_rightwall.png',
+            'images/page6_diagonal.png',
+            'images/page6_wall.png',
+            'images/page7_flower1.png',
+            'images/page7_flower2.png',
+            'images/page7_flower3.png',
+            'images/page7_flower4.png',
+            'images/page7_flower5.png',
+            'images/page7_flower6.png',
+            'images/page7_heart.png',
+            'images/page7_wall.png',
+            'images/page8_flower.jpg',
+            'images/page8_qbt.png',
+            'images/page8_target.png',
+            'images/together_1.jpg',
+            'images/us_4.jpg',
+            'images/us_5.jpg',
+            'images/us_6.jpg',
+            'images/us_7.jpg',
+            'images/us_8.jpg',
+            'images/us_9.jpg',
+            'images/us_10.jpg',
+            'images/us_11.jpg',
+            'images/us_12.jpg',
+            'images/us_13.jpg',
+            'images/you3.png',
+            'images/you4.png',
+            'images/you5.jpg',
+            'images/you8.jpg',
+            'images/you9.jpg',
+            'images/you10.jpg',
+            'images/you11.jpg',
+            'images/you12.jpg',
+            'images/you13.jpg',
+            'images/you14.jpg',
+            'images/you15.jpg',
+            'images/you16.jpg',
+            'images/you17.jpg',
+            'images/you18.jpg',
+            'images/you19.png',
+        ]
+
+        function preloadimage(arr) {
+            var newimages = [],
+                loadedimages = 0;
+            var arr = (typeof arr != "object") ? [arr] : arr;
+
+            function imageloadpost() {
+                loadedimages++;
+                var processNum = Math.ceil(Number(loadedimages / arr.length).toFixed(2) * 100);
+                var processDeg = (Number(loadedimages / arr.length).toFixed(2) * 360).toFixed(2);
+                // console.log(processNum, processDeg)
+                loading(processDeg)
+                $(".num").html(processNum);
+                $("#music").show();
+                if (loadedimages <= arr.length) {
+                    // fnLoad(loadedimages,arr.length);
+                    if (loadedimages == arr.length) {
+                        fnStart();
+                    }
+                }
+            }
+            for (var i = 0; i < arr.length; i++) {
+                newimages[i] = new Image();
+                newimages[i].src = arr[i];
+                newimages[i].onload = function () {
+                    imageloadpost();
+                }
+                newimages[i].onerror = function () {
+                    imageloadpost();
+                }
+            }
+
+            var pie1Element = $(".load").find(".pie1");
+            var pie2Element = $(".load").find(".pie2");
+
+            function loading(e) {
+                180 >= e && e >= 0 ? pie1Element.css({
+                    transform: 'rotate(' + e + "deg)"
+                }) : 360 >= e && e > 180 && (pie1Element.css({
+                    transform: 'rotate(180deg)'
+                }), pie2Element.css({
+                    background: "#afe4dd",
+                    transform: "rotate(" + e + "deg)"
+                }))
+            }
+
+            function fnStart() {
+                $('.preload').hide();
+                readyGo();
+            }
+        }
+    })
+</script>
+<script type="text/javascript">
+    function readyGo() {
+        var isTyped = false;
+
+        // dialog
+        //给两个图片定义为一个数组
+        var arr = ['./images/cat2.jpg', './images/cat1.jpg'];
+        //默认输入框显示光标
+        $('#import').focus();
+        var responsedArr = ['I love you,Would you marry me?', 'Yes,I do!']
+        var responnum = 0;
+        $('#enter').click(function () {
+            if (!$('#import').val()) {
+                return;
+            } else {
+                if (responnum == 0) {
+                    $('#inHtml li').removeClass('show');
+                    var str = '<li class="th show">' + '<img src=' + arr[0] + " /><p><span>" + $('#import').val() +
+                        '</span><span class="sent1"></span>' + "</p></li>";
+                    $('#inHtml').append(str);
+                    $("#import").val('');
+                    setTimeout(function () {
+                        var Cln = '<li class="ds show">' + '<img src=' + arr[1] + " /><p><span>" +
+                            responsedArr[responnum] +
+                            '</span><span class="sent2"></span>' + "</p></li>";
+                        $('#inHtml').append(Cln);
+                        responnum++;
+                    }, 500);
+                } else if (responnum == 1) {
+                    $('#inHtml li').removeClass('show');
+                    var str = '<li class="th show">' + '<img src=' + arr[0] + " /><p><span>" + responsedArr[
+                            responnum] +
+                        '</span><span class="sent1"></span>' + "</p></li>";
+                    $('#inHtml').append(str);
+                    $("#import").val('');
+                    responnum++;
+                    typed.start && typed.start();
+                    $(".typed-cursor").show();
+                } else {
+                    $("#import").attr("readonly", "readonly");
+                    return;
+                }
+            }
+        })
+        var wordArr = [{
+                p: '往后余生',
+                class: 'show1'
+            },
+            {
+                p: '四季冷暖是你,心底温柔是你',
+                class: 'show2'
+            },
+            {
+                p: '你喜欢吗？',
+                class: 'show3'
+            }
+        ]
+
+        function cat1Say(word, className) {
+            var str = '<li class="ds ' + className + '">' + '<img src=' + arr[1] + " /><p><span>" + word +
+                '</span><span class="sent2"></span>' + "</p></li>";
+            $('#inHtml').append(str);
+        }
+        // for (var i = 0; i < wordArr.length; i++) {
+        //     cat1Say(wordArr[i].p, wordArr[i].class)
+        // }
+
+        $('.swiper-container').show();
+        var mySwiper1 = new Swiper('#swiper1', {
+            followFinger: false,
+            direction: 'vertical',
+            mousewheelControl: false,
+            slideActiveClass: 'active',
+            on: {
+                slideChangeTransitionEnd: function () {
+                    if (this.activeIndex + 1 == $("#swiper1 .swiper-slide").length - $(
+                            "#swiper2 .swiper-slide").length) {
+                        $(".Arrow").hide();
+
+                        // dialog begin
+                        $('#inHtml').empty();
+                        for (var i = 0; i < wordArr.length; i++) {
+                            cat1Say(wordArr[i].p, wordArr[i].class)
+                        }
+                    } else {
+                        $(".Arrow").show();
+                        $(".typed-cursor").hide();
+                        typed.reset && typed.reset();
+                        typed.stop && typed.stop();
+                        responnum = 0;
+                    }
+                },
+            },
+        })
+        var mySwiper2 = new Swiper('#swiper2', {
+            followFinger: false,
+            direction: 'horizontal',
+            mousewheelControl: false,
+            loop: true,
+            effect: 'flip',
+            pagination: {
+                el: '.swiper-pagination',
+            }
+        })
+        var typed = new Typed('#typed', {
+            strings: ['就是今天，我要把你定下来，<br>往后余生，一直陪伴你身旁，<br>守护你，从此刻起。'],
+            typeSpeed: 200,
+            startDelay: 1000
+        });
+        typed.stop();
+
+        // Control audio
+        $("#music").click(function () {
+
+            if ($("#bgmedia").get(0) !== null) {
+                //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+                if ($("#bgmedia").get(0).paused) {
+                    $("#bgmedia").get(0).play(); //audio.play();// 这个就是播放
+                    $(this).attr("src", "images/musicon.png");
+                } else {
+                    $("#bgmedia").get(0).pause(); // 这个就是暂停
+                    $(this).attr("src", "images/musicoff.png");
+                }
+            }
+        })
+
+        // Time
+        $("#time").html(new Date().getFullYear());
+
+
+    }
+</script>
+
+</html>
